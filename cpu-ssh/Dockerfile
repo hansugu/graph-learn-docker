@@ -51,10 +51,10 @@ ENV LD_LIBRARY_PATH=/usr/lib64:$LD_LIBRARY_PATH
 
 #install graph-learn
 RUN mkdir -p /workspace
-RUN cd /workspace && wget https://github.com/hansugu/graph-learn-docker/releases/download/v0.11-cpu/graphlearn-0.11-cp27-cp27mu-linux_x86_64.whl
+RUN cd /workspace && wget https://github.com/hansugu/graph-learn-docker/releases/download/binaries/graphlearn-0.11-cp27-cp27mu-linux_x86_64.whl
 #ADD graphlearn-0.1-cp27-cp27mu-linux_x86_64.whl /workspace
 #ADD requirements.txt /workspace
-RUN cd /workspace && wget https://github.com/hansugu/graph-learn-docker/releases/download/v0.11-cpu/requirements.txt
+RUN cd /workspace && wget https://github.com/hansugu/graph-learn-docker/releases/download/binaries/requirements.txt
 RUN /opt/conda/bin/pip install -I /workspace/graphlearn-0.11-cp27-cp27mu-linux_x86_64.whl
 RUN /opt/conda/bin/pip install -r /workspace/requirements.txt
 
